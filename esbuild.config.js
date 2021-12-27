@@ -8,7 +8,7 @@ export let config = {
 	entryPoints: ['src/App.velvet'],
 	entryNames: 'app',
 	outdir: 'dist/_assets',
-	publicPath: '/_assets/',
+	publicPath: '/velvet-todomvc/_assets/',
 
 	sourcemap: true,
 
