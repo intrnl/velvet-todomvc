@@ -31,7 +31,7 @@ packages:
       esbuild: ^0.14.8
     dependencies:
       '@intrnl/fs-cache': 0.2.3
-      '@intrnl/velvet-compiler': 0.2.1
+      '@intrnl/velvet-compiler': 0.2.2
       esbuild: 0.14.8
     dev: true
 
@@ -43,8 +43,8 @@ packages:
       stable-hash: 0.0.2
     dev: true
 
-  /@intrnl/velvet-compiler/0.2.1:
-    resolution: {integrity: sha512-d27BbCLlWH7RxxNFwu9hpnFHayyOHWXQ2aOxiaJ2nodOcs490V1l99BtmGd4stDAipxtC/+xkWkg7QBgnino4w==}
+  /@intrnl/velvet-compiler/0.2.2:
+    resolution: {integrity: sha512-jkxuAPBhpsuIYC0Jpt9UVPzrBJMsrCbMScTZMX5XVYdXdG8wtkvoYRGnRrniGsZrLifhWyU3Jq0zd42BNtgZZw==}
     dependencies:
       acorn: 8.7.0
       astring: 1.8.1
