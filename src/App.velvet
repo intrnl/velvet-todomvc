@@ -83,11 +83,7 @@
 	update_view();
 
 	$: localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
-	$: {
-		if (editing_ref) {
-			setTimeout(() => editing_ref.focus());
-		}
-	}
+	$: if (editing_ref) setTimeout(() => editing_ref.focus());
 </script>
 
 <header class='header'>
