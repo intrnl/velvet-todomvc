@@ -3,7 +3,8 @@
 	"name": "todomvc-velvet",
 	"scripts": {
 		"dev": "NODE_ENV=development node ./scripts/dev.js",
-		"build": "NODE_ENV=production node ./scripts/build.js"
+		"build": "NODE_ENV=production node ./scripts/build.js",
+		"deploy": "pnpm run build && gh-pages -d dist/"
 	},
 	"dependencies": {
 		"@intrnl/velvet": "^0.1.2"
