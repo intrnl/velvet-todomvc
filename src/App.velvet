@@ -116,7 +116,7 @@
 							{item.title}
 						</label>
 
-						<button class='destroy' @click={() => remove_todo(item.id)}></button>
+						<button class='destroy' @click={() => remove_todo(item.id)} />
 					</div>
 
 					{#if editing === item.id}
