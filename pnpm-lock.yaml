@@ -2,16 +2,18 @@ lockfileVersion: 5.3
 
 specifiers:
   '@intrnl/esbuild-plugin-build-analysis': ^0.1.2
-  '@intrnl/esbuild-plugin-velvet': ^0.1.2
-  '@intrnl/velvet': ^0.1.4
+  '@intrnl/esbuild-plugin-velvet': ^0.2.0
+  '@intrnl/velvet': ^0.1.5
+  '@intrnl/velvet-compiler': ^0.3.0
   esbuild: ^0.14.8
 
 dependencies:
-  '@intrnl/velvet': 0.1.4
+  '@intrnl/velvet': 0.1.5
 
 devDependencies:
   '@intrnl/esbuild-plugin-build-analysis': 0.1.2_esbuild@0.14.8
-  '@intrnl/esbuild-plugin-velvet': 0.1.2_esbuild@0.14.8
+  '@intrnl/esbuild-plugin-velvet': 0.2.0_15953df3460ab02d49157c355d05ef6f
+  '@intrnl/velvet-compiler': 0.3.0
   esbuild: 0.14.8
 
 packages:
@@ -25,13 +27,14 @@ packages:
       esbuild: 0.14.8
     dev: true
 
-  /@intrnl/esbuild-plugin-velvet/0.1.2_esbuild@0.14.8:
-    resolution: {integrity: sha512-m9w9lE3ShmFrDmO4zWImFK1C5kIA9qdnDCqBpArD8glIxcBOISmJj5mZ2c/SA+Za27uXqnEEoyfQxEiH7HeG6A==}
+  /@intrnl/esbuild-plugin-velvet/0.2.0_15953df3460ab02d49157c355d05ef6f:
+    resolution: {integrity: sha512-AQcK/DxFVhocXN7DpCgfRbaKYxIpVIEEC8DMJgK618bnESuDDAC5gv40+ErFQL2qI8XEYuePTUE8c6sFcfiPbA==}
     peerDependencies:
+      '@intrnl/velvet-compiler': ^0.3.0
       esbuild: ^0.14.8
     dependencies:
       '@intrnl/fs-cache': 0.2.3
-      '@intrnl/velvet-compiler': 0.2.4
+      '@intrnl/velvet-compiler': 0.3.0
       esbuild: 0.14.8
     dev: true
 
@@ -43,15 +46,16 @@ packages:
       stable-hash: 0.0.2
     dev: true
 
-  /@intrnl/velvet-compiler/0.2.4:
-    resolution: {integrity: sha512-d557m6g56M1JLVhkE5tr4JNrvbe6PIBLM9hQkwvSgRTRrWruLobzHkUfYiGoZ0h7H9UUoQo9qS8qT3mqGVUMjw==}
+  /@intrnl/velvet-compiler/0.3.0:
+    resolution: {integrity: sha512-wFGcrCaY4plhVv3fbRbbkQlBjp3V4Kib7p32I7p/K7gXEgNBqULhKoV4QEIMOF6CA4zx1AHya07FF2E7l2d5eg==}
     dependencies:
       acorn: 8.7.0
       astring: 1.8.1
+      gensync: 1.0.0-beta.2
     dev: true
 
-  /@intrnl/velvet/0.1.4:
-    resolution: {integrity: sha512-m2iZUdgOUa0qb50jbLrKY0zKhc15brfc6tAcZir4pToKd+65/lHUXrVgzX3zIntiwVt6DDAW8RrXPmAsIaeChw==}
+  /@intrnl/velvet/0.1.5:
+    resolution: {integrity: sha512-oZAImvg+0aHcNXuGHdwpcUEnbyGwPBK8rTDbcJF7Jb+GciUlt2TAF1LfP2yjY/Hbikg5I1siNb55VpcDZ0j+2A==}
     dev: false
 
   /@intrnl/xxhash64/0.1.1:
@@ -245,6 +249,11 @@ packages:
   /escalade/3.1.1:
     resolution: {integrity: sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==}
     engines: {node: '>=6'}
+    dev: true
+
+  /gensync/1.0.0-beta.2:
+    resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
+    engines: {node: '>=6.9.0'}
     dev: true
 
   /stable-hash/0.0.2:
