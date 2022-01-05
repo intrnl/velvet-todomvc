@@ -99,7 +99,7 @@
 {#if items.length > 0}
 	<section class='main'>
 		<input id='toggle-all' class='toggle-all' type='checkbox' .checked={remaining === 0} @change={toggle_all} />
-		<label for="toggle-all">Mark all as complete</label>
+		<label for='toggle-all'>Mark all as complete</label>
 
 		<ul class='todo-list'>
 			{#each item of filtered_items}
