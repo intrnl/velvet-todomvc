@@ -4,7 +4,7 @@ specifiers:
   '@intrnl/esbuild-plugin-build-analysis': ^0.1.2
   '@intrnl/esbuild-plugin-velvet': ^0.2.1
   '@intrnl/velvet': ^0.1.17
-  '@intrnl/velvet-compiler': ^0.3.12
+  '@intrnl/velvet-compiler': ^0.3.13
   esbuild: ^0.14.10
 
 dependencies:
@@ -12,8 +12,8 @@ dependencies:
 
 devDependencies:
   '@intrnl/esbuild-plugin-build-analysis': 0.1.2_esbuild@0.14.10
-  '@intrnl/esbuild-plugin-velvet': 0.2.1_598d3aa1a8e0a22bf8c2df583d9d0cdd
-  '@intrnl/velvet-compiler': 0.3.12_@intrnl+velvet@0.1.17
+  '@intrnl/esbuild-plugin-velvet': 0.2.1_ddc586d1573fb54762afe90daee3a8af
+  '@intrnl/velvet-compiler': 0.3.13_@intrnl+velvet@0.1.17
   esbuild: 0.14.10
 
 packages:
@@ -27,14 +27,14 @@ packages:
       esbuild: 0.14.10
     dev: true
 
-  /@intrnl/esbuild-plugin-velvet/0.2.1_598d3aa1a8e0a22bf8c2df583d9d0cdd:
+  /@intrnl/esbuild-plugin-velvet/0.2.1_ddc586d1573fb54762afe90daee3a8af:
     resolution: {integrity: sha512-4LdYOELmP3m3Ds2OqZ3Y9seP7OjE0HmiARFRASsZyTfBijOBiJL8gTDZfWtpyGPlJFLrYhoSNECW6MyO81HyRg==}
     peerDependencies:
       '@intrnl/velvet-compiler': ^0.3.11
       esbuild: ^0.14.8
     dependencies:
       '@intrnl/fs-cache': 0.2.3
-      '@intrnl/velvet-compiler': 0.3.12_@intrnl+velvet@0.1.17
+      '@intrnl/velvet-compiler': 0.3.13_@intrnl+velvet@0.1.17
       esbuild: 0.14.10
     dev: true
 
@@ -46,8 +46,8 @@ packages:
       stable-hash: 0.0.2
     dev: true
 
-  /@intrnl/velvet-compiler/0.3.12_@intrnl+velvet@0.1.17:
-    resolution: {integrity: sha512-S8WQVDgMI3sGDQ2Ye+s1MGCHsh52Xdqr/gAONfS8l8vihsZPmQHA3s+qu60r0ROhlU4Ad7F+vu6ehT1l+gn6Rg==}
+  /@intrnl/velvet-compiler/0.3.13_@intrnl+velvet@0.1.17:
+    resolution: {integrity: sha512-OXjkir7dmMWe+UamCK2cUzWB/9WClDLz6fP9kqZG8mosd9UtqvtDB5ge0GeP170p6ma0RW6EHIjype+Q9A/WTg==}
     peerDependencies:
       '@intrnl/velvet': ^0.1.13
     dependencies:
