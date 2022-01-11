@@ -67,6 +67,7 @@
 	const handle_submit = (event) => {
 		edit_todo({ id: editing, title: event.target.value });
 		editing = null;
+		editing_ref = null;
 	};
 
 	const update_view = () => {
