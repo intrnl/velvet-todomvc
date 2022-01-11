@@ -61,6 +61,7 @@
 		}
 		else if (event.which === ESCAPE_KEY) {
 			editing = null;
+			editing_ref = null;
 		}
 	};
 
