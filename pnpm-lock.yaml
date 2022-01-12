@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@intrnl/esbuild-plugin-build-analysis': ^0.1.2
-  '@intrnl/esbuild-plugin-velvet': ^0.2.1
+  '@intrnl/esbuild-plugin-velvet': ^0.2.2
   '@intrnl/velvet': ^0.1.19
   '@intrnl/velvet-compiler': ^0.3.17
   esbuild: ^0.14.11
@@ -12,7 +12,7 @@ dependencies:
 
 devDependencies:
   '@intrnl/esbuild-plugin-build-analysis': 0.1.2_esbuild@0.14.11
-  '@intrnl/esbuild-plugin-velvet': 0.2.1_a6529158cd62755332b8be743a7cab97
+  '@intrnl/esbuild-plugin-velvet': 0.2.2_a6529158cd62755332b8be743a7cab97
   '@intrnl/velvet-compiler': 0.3.17_@intrnl+velvet@0.1.19
   esbuild: 0.14.11
 
@@ -27,8 +27,8 @@ packages:
       esbuild: 0.14.11
     dev: true
 
-  /@intrnl/esbuild-plugin-velvet/0.2.1_a6529158cd62755332b8be743a7cab97:
-    resolution: {integrity: sha512-4LdYOELmP3m3Ds2OqZ3Y9seP7OjE0HmiARFRASsZyTfBijOBiJL8gTDZfWtpyGPlJFLrYhoSNECW6MyO81HyRg==}
+  /@intrnl/esbuild-plugin-velvet/0.2.2_a6529158cd62755332b8be743a7cab97:
+    resolution: {integrity: sha512-8gEJ/ZfRTtH3y1n5w9FPr8esiydJjZQlzR1SSYZzC+PSb/bz+KAXtBj+fk0IOSaHXHIUmJxKmQhnGntKF9eNzQ==}
     peerDependencies:
       '@intrnl/velvet-compiler': ^0.3.11
       esbuild: ^0.14.8
