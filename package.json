@@ -1,6 +1,9 @@
 {
 	"type": "module",
 	"name": "todomvc-velvet",
+	"engines": {
+		"node": ">=16.0.0"
+	},
 	"scripts": {
 		"dev": "NODE_ENV=development node ./scripts/dev.js",
 		"build": "NODE_ENV=production node ./scripts/build.js"
