@@ -9,7 +9,7 @@
 		"build": "NODE_ENV=production node ./scripts/build.js"
 	},
 	"dependencies": {
-		"@intrnl/velvet": "^0.1.29"
+		"@intrnl/velvet": "^0.1.30"
 	},
 	"devDependencies": {
 		"@intrnl/esbuild-plugin-build-analysis": "^0.1.2",
