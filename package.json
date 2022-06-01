@@ -14,7 +14,7 @@
 	"devDependencies": {
 		"@intrnl/esbuild-plugin-build-analysis": "^0.1.2",
 		"@intrnl/esbuild-plugin-velvet": "^0.3.4",
-		"@intrnl/velvet-compiler": "^0.3.27",
-		"esbuild": "^0.14.39"
+		"@intrnl/velvet-compiler": "^0.3.28",
+		"esbuild": "^0.14.42"
 	}
 }
