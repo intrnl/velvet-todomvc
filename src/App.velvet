@@ -105,7 +105,7 @@
 
 		<ul class='todo-list'>
 			{#each item of filtered_items}
-				<li class={`todo ${item.completed ? 'completed' : ''} ${editing === item.id ? 'editing' : ''}`}>
+				<li class={{ todo: true, completed: item.completed, editing: editing === item.id }}>
 					<div class='view'>
 						<input
 							class='toggle'
@@ -140,9 +140,9 @@
 			</span>
 
 			<ul class='filters'>
-				<li><a class={visibility === 'all' ? 'selected' : ''} href='#/'>All</a></li>
-				<li><a class={visibility === 'active' ? 'selected' : ''} href='#/active'>Active</a></li>
-				<li><a class={visibility === 'completed' ? 'selected' : ''} href='#/completed'>Completed</a></li>
+				<li><a class={{ selected: visibility === 'all' }} href='#/'>All</a></li>
+				<li><a class={{ selected: visibility === 'active' }} href='#/active'>Active</a></li>
+				<li><a class={{ selected: visibility === 'completed' }} href='#/completed'>Completed</a></li>
 			</ul>
 
 			{#if items.length > remaining}
