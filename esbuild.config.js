@@ -13,6 +13,6 @@ export let config = {
 	sourcemap: true,
 
 	plugins: [
-		velvet(),
+		velvet({ cache: false }),
 	],
 };
