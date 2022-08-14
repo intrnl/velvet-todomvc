@@ -104,7 +104,7 @@
 		<label for='toggle-all'>Mark all as complete</label>
 
 		<ul class='todo-list'>
-			{#each item of filtered_items}
+			{#each filtered_items as item}
 				<li class={{ todo: true, completed: item.completed, editing: editing === item.id }}>
 					<div class='view'>
 						<input
