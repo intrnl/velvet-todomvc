@@ -10,12 +10,12 @@
 		"publish": "scripts/publish.sh"
 	},
 	"dependencies": {
-		"@intrnl/velvet": "^0.3.1"
+		"@intrnl/velvet": "^0.4.1"
 	},
 	"devDependencies": {
 		"@intrnl/esbuild-plugin-build-analysis": "^0.1.2",
-		"@intrnl/esbuild-plugin-velvet": "^0.4.3",
-		"@intrnl/velvet-compiler": "^0.6.0",
-		"esbuild": "^0.14.53"
+		"@intrnl/esbuild-plugin-velvet": "^0.5.2",
+		"@intrnl/velvet-compiler": "^0.7.1",
+		"esbuild": "^0.15.7"
 	}
 }
