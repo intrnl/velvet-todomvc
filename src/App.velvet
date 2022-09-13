@@ -314,13 +314,13 @@
 	}
 
 	.todo-list li .toggle + label {
-		background-image: url('/assets/checkbox.svg');
+		background-image: url('./assets/checkbox.svg');
 		background-repeat: no-repeat;
 		background-position: center left;
 	}
 
 	.todo-list li .toggle:checked + label {
-		background-image: url('/assets/checkbox-checked.svg');
+		background-image: url('./assets/checkbox-checked.svg');
 	}
 
 	.todo-list li label {
