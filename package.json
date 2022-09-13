@@ -7,7 +7,7 @@
 	"scripts": {
 		"dev": "NODE_ENV=development node ./scripts/dev.js",
 		"build": "NODE_ENV=production node ./scripts/build.js",
-		"publish": "wrangler pages publish dist/"
+		"publish": "scripts/publish.sh"
 	},
 	"dependencies": {
 		"@intrnl/velvet": "^0.3.1"
@@ -16,7 +16,6 @@
 		"@intrnl/esbuild-plugin-build-analysis": "^0.1.2",
 		"@intrnl/esbuild-plugin-velvet": "^0.4.3",
 		"@intrnl/velvet-compiler": "^0.6.0",
-		"esbuild": "^0.14.53",
-		"wrangler": "^2.0.24"
+		"esbuild": "^0.14.53"
 	}
 }
