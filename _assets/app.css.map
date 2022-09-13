@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/style.css"],
+  "sourcesContent": ["body {\n\tfont-size: 14px;\n\tfont-weight: 300;\n\tfont-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;;\n\tmargin: 0 auto;\n\tline-height: 1.4em;\n\tbackground: #f5f5f5;\n\tcolor: #111111;\n\tmin-width: 230px;\n\tmax-width: 550px;\n}\n"],
+  "mappings": "AAAA,KACC,eACA,gBACA,sDAHD,cAKC,kBACA,mBACA,WACA,gBACA",
+  "names": []
+}
