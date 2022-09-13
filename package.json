@@ -10,7 +10,7 @@
 		"publish": "rm -r dist/_assets; pnpm run build; scripts/publish.sh"
 	},
 	"dependencies": {
-		"@intrnl/velvet": "^0.4.1"
+		"@intrnl/velvet": "^0.4.2"
 	},
 	"devDependencies": {
 		"@intrnl/esbuild-plugin-build-analysis": "^0.1.2",
