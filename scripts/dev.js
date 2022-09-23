@@ -8,9 +8,73 @@ import { config } from '../esbuild.config.js';
 const args = process.argv.slice(2);
 
 const serverOptions = {
-	host: args.includes('--host') ? '0.0.0.0' : '127.0.0.1',
+	host: args.includes('--expose') ? '0.0.0.0' : '127.0.0.1',
 	port: 3000,
 };
+
+
+const startServer = (server, options) => {
+	const { host, port } = options;
+
+	return new Promise((resolve, reject) => {
+		let currentPort = port;
+		let looped = false;
+
+		const handleError = (error) => {
+			if (!looped && error.code === 'EADDRINUSE') {
+				console.log(`port ${currentPort} already in use, retrying...`);
+
+				currentPort = (currentPort % 65535) + 1;
+				looped = currentPort === port;
+
+				server.listen(currentPort, host);
+			}
+			else {
+				server.removeListener('error', handleError);
+				reject(error);
+			}
+		};
+
+		server.on('error', handleError);
+
+		server.listen(port, host, () => {
+			server.removeListener('error', handleError);
+
+			const { address: host, port } = server.address();
+			resolve({ host, port });
+		});
+	});
+};
+
+const printServerInfo = ({ host, port }) => {
+	if (host === '127.0.0.1') {
+		console.info(`> local: http://${host}:${port}`);
+		console.info(`> network: not exposed`);
+	}
+	else {
+		const mapping = os.networkInterfaces();
+
+		for (const intrf in mapping) {
+			const addresses = mapping[intrf];
+
+			for (const address of addresses) {
+				// for some reason, @types/node tells you that `.family` is a string,
+				// while in reality, it's a number, so we'll just check for both.
+				if (address.family !== 'IPv4' && address.family !== 4) {
+					continue;
+				}
+
+				const type = address.internal ? 'local' : 'network';
+				const hostname = address.internal ? 'localhost' : address.address;
+
+				console.info(`> ${type}: http://${hostname}:${port} (${intrf})`);
+			}
+		}
+	}
+
+	console.log('');
+};
+
 
 const internal = await esbuild.serve({
 	servedir: 'dist/',
@@ -54,50 +118,3 @@ const server = http.createServer((request, response) => {
 
 const result = await startServer(server, serverOptions);
 printServerInfo(result);
-
-
-function startServer (server, options) {
-	const { host, port } = options;
-
-	return new Promise((resolve, reject) => {
-		const handleError = (error) => {
-			if (error.code === 'EADDRINUSE') {
-				console.log(`port ${port} already in use, retrying...`);
-				server.listen(0, host);
-			}
-			else {
-				server.removeListener('error', handleError);
-				reject(error);
-			}
-		};
-
-		server.on('error', handleError);
-
-		server.listen(port, host, () => {
-			server.removeListener('error', handleError);
-
-			const { address: host, port } = server.address();
-			resolve({ host, port });
-		});
-	});
-}
-
-function printServerInfo ({ host, port }) {
-	if (host === '127.0.0.1') {
-		console.info(`> local: http://${host}:${port}`);
-		console.info(`> network: not exposed`);
-	}
-	else {
-		const addresses = Object.values(os.networkInterfaces())
-			.flatMap((intrf) => intrf ?? [])
-			.filter((address) => address.family === 'IPv4');
-
-		for (const address of addresses) {
-			const type = address.internal ? 'local' : 'network';
-			const hostname = address.internal ? 'localhost' : address.address;
-			console.info(`> ${type}: http://${hostname}:${port}`);
-		}
-	}
-
-	console.log('');
-}
