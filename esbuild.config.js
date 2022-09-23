@@ -5,7 +5,7 @@ import velvet from '@intrnl/esbuild-plugin-velvet';
 
 /** @type {esbuild.BuildOptions} */
 export let config = {
-	entryPoints: ['src/App.velvet'],
+	entryPoints: ['src/main.js'],
 	entryNames: 'app',
 	outdir: 'dist/_assets',
 
@@ -14,4 +14,7 @@ export let config = {
 	plugins: [
 		velvet({ cache: false }),
 	],
+	loader: {
+		'.svg': 'file',
+	},
 };
